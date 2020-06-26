@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Complete Calculator</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="app.js">
+
+</head>
+<body>
+
+    <div class="mainContainer">
+
+        <form>
+            <input type="text" name="result" id="result" class="result">
+        </form>
+
+        <table >
+            <tr>
+                <td colspan="2"><input style="width: 122px; " class="button button-1 " type="button" onclick="clearResult()" value="C"></td>
+                <td ><input class="button btn-1" type="button" onclick="getNumber('/')" value="/" ></td>
+                <td><input class="button btn-1" type="button" onclick="getNumber('*')" value="x"></td>
+            </tr>
+            <tr>
+                <td><input class="button button-col1" type="button" onclick="getNumber('7')" value="7"></td>
+                <td><input class="button button-col4" class="button" onclick="getNumber('8')" type="button" value="8"></td>
+                <td><input class="button button-col5" type="button" onclick="getNumber('9')" value="9"></td>
+                <td><input class="button btn-1" type="button" onclick="getNumber('-')" value="-"></td>
+            </tr>
+
+            <tr>
+                <td><input class="button button-col2" type="button" onclick="getNumber('4')" value="4"></td>
+                <td><input class="button button-col1" type="button" onclick="getNumber('5')" value="5"></td>
+                <td><input class="button button-col4" type="button" onclick="getNumber('6')" value="6"></td>
+                <td rowspan="2"><input style="height: 112px;" class="button btn-1" type="button" onclick="getNumber('+')" value="+"></td>
+            </tr>
+
+            <tr>
+                <td><input class="button button-col3" type="button" onclick="getNumber('1')" value="1"></td>
+                <td><input class="button button-col2" type="button" onclick="getNumber('2')" value="2"></td>
+                <td><input class="button button-col1" type="button" onclick="getNumber('3')" value="3"></td>
+                
+            </tr>
+
+            <tr>
+                <td><input class="button button-col5" type="button" onclick="getNumber('0')" value="0"></td>
+                <td><input class="button button-col3" type="button" onclick="getNumber('00')" value="00"></td>
+                <td><input class="button button-col2" type="button" onclick="getNumber('.')" value="."></td>
+                <td><input class="button button-1" type="button" onclick="getResult('')" value="="></td>
+            </tr>
+
+        </table>
+
+
+
+    </div>
+
+
+
+
+
+        <!-- <div>
+            <input id="result" type="text" name="text-box">
+        </div>
+
+    
+            <button class="clearButton">C</button>
+            <button class="input-btn">/</button>
+            <button class="input-btn">x</button>
+            <button class="input-btn">7</button>
+            <button class="input-btn">8</button>
+            <button class="input-btn">9</button>
+            <button class="input-btn">-</button> 
+            <button class="input-btn">4</button>
+            <button class="input-btn">5</button>
+            <button class="input-btn">6</button>
+            <button class="input-btn " style="height: 100px;">+</button>
+            <button class="input-btn">1</button>
+            <button class="input-btn">2</button>
+            <button class="input-btn">3</button>
+            <button class="input-btn">0</button>
+            <button class="input-btn">00</button>
+            <button class="input-btn">.</button>
+            <button class="input-btn">=</button>
+ -->   
+  
+
+<script type="text/javascript">
+    function getNumber(num){
+        // console.log(num)
+    var result = document.getElementById('result');
+    result.value += num; 
+}
+
+function clearResult() {
+     var result = document.getElementById('result');
+     result.value="0"
+}
+function getResult() {
+    var result = document.getElementById('result');
+    result.value = eval(result.value);
+
+}
+</script>
+</body>
+</html>
